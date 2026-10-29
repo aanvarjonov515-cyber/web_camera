@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kamera — Rasm olish</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Kamera</h1>
+      <p id="status">Tayyor...</p>
+    </header>
+
+    <section class="preview">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas" hidden></canvas>
+    </section>
+
+    <section class="controls">
+      <button id="btnStart" type="button">1. Kamerani yoqish</button>
+      <button id="btnCapture" type="button" disabled>2. Rasm olish</button>
+    </section>
+
+    <section class="gallery-wrap">
+      <h2>Olingan rasmlar</h2>
+      <p class="hint">Rasmlar shu yerda chiqadi. Saqlash uchun «Yuklab olish» ni bosing.</p>
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

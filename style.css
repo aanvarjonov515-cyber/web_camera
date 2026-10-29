@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #1a1a1a;
+  background: linear-gradient(160deg, #e8f1f8 0%, #f5f0e8 55%, #efe6dc 100%);
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  margin-top: 6px;
+  color: #445566;
+  font-size: 0.95rem;
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  box-shadow: 0 12px 40px rgba(20, 40, 60, 0.18);
+}
+
+#video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 28px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+#btnStart {
+  background: #0f7b4c;
+  color: #fff;
+}
+
+#btnCapture {
+  background: #1f6feb;
+  color: #fff;
+}
+
+.gallery-wrap h2 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.hint {
+  color: #556677;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.gallery figure {
+  margin: 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #dbe3ea;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery figcaption {
+  padding: 8px 10px 0;
+  font-size: 0.75rem;
+  color: #556677;
+  word-break: break-all;
+}
+
+.download-link {
+  display: block;
+  margin: 8px 10px 10px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  background: #eef3f8;
+  color: #1f6feb;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.error {
+  color: #b42318 !important;
+}
